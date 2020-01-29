@@ -23,7 +23,7 @@ export class HttpClientService {
   getTicketLines()
   {
     console.log("test call");
-    return this.httpClient.get<Lines[]>('http://localhost:8080/lottery/ticket/0/lines');
+    return this.httpClient.get<Lines[]>('http://localhost:8090/lottery/ticket/0/lines');
   }
 
 }
