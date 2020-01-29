@@ -23,6 +23,7 @@ export class LotteryComponent implements OnInit {
 handleSuccessfulResponse(response)
 {
     this.ticketlines=response;
+    console.log(this.ticketlines[1]);
 }
 
 }
