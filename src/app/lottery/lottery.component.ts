@@ -15,6 +15,10 @@ export class LotteryComponent implements OnInit {
   ) { }
 
   ngOnInit() {
+    this.httpClientService.postTicket().subscribe(
+      response =>this.handleSuccessfulPost(response),
+    );
+
     this.httpClientService.getTicketLines().subscribe(
      response =>this.handleSuccessfulResponse(response),
     );
@@ -25,5 +29,10 @@ handleSuccessfulResponse(response)
     this.ticketlines=response;
     console.log(this.ticketlines[1]);
 }
+
+  handleSuccessfulPost(response)
+  {
+    console.log("New Ticket created!!!");
+  }
 
 }

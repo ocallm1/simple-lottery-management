@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders, HttpResponse} from '@angular/common/http';
 
 export class Lines{
 constructor(
@@ -22,8 +22,13 @@ export class HttpClientService {
 
   getTicketLines()
   {
-    console.log("test call");
+    console.log("test Get TicketLines call");
     return this.httpClient.get<Lines[]>('http://localhost:8090/lottery/ticket/0/lines');
+  }
+
+  postTicket() {
+    console.log("test Post Ticket call");
+    return this.httpClient.post('http://localhost:8090/lottery/ticket', "" );
   }
 
 }
