@@ -35,6 +35,11 @@ export class LotteryComponent implements OnInit {
     console.log("New Ticket created!!!");
   }
 
+  lotteryColumnDefs = [
+    {headerName: 'NumberOne', field: 'numberOne', sortable: true, filter: true },
+    {headerName: 'NumberTwo', field: 'numberTwo' },
+    {headerName: 'NumberThree', field: 'numberThree'}
+  ];
 
   columnDefs = [
     {headerName: 'Make', field: 'make', sortable: true, filter: true },
