@@ -7,6 +7,8 @@
 </ag-grid-angular>
 
 
+
+
 <table border="1">
   <thead></thead>
   <tr>
@@ -23,3 +25,28 @@
   </tr>
   </tbody>
 </table>
+
+
+<!--<form [formGroup]="form" (ngSubmit)="submit()">-->
+  <!--<label for="orders">Order</label>-->
+  <select formControlName="rowData" id="rowData">
+    <option *ngFor="let row of rowData; let i = index" [value]="rowData[i].id">
+      {{rowData[i].make}}
+    </option>
+  </select>
+
+  <!--<button>submit</button>-->
+<!--</form>-->
+
+<select>
+  <option ng-repeat="ticketline in ticketlines">{{ticketline}}</option>
+</select>
+
+<select id="cars">
+  <option value="volvo">Volvo</option>
+  <option value="saab">Saab</option>
+  <option value="mercedes">Mercedes</option>
+  <option value="audi">Audi</option>
+</select>
+
+
